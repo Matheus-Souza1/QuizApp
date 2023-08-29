@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.correct {
+  background-color: #03a678;
+  padding: 10px;
+  color: white;
+}
+.incorrect {
+  background-color: #96281b;
+  padding: 10px;
+  color: white;
+}
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 40%;
+ }
+}

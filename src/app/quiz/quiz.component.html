@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="quiz-container">
+    <div class="quiz-timer">
+      <span>{{timer}}</span>
+    </div>
+    <div class="quiz-header">
+      <h1>Pergunta</h1>
+      <div class="quiz-page">
+        <p>{{questionIndex + 1}}</p><span>/ {{ questions.length }}</span>
+      </div>
+    </div>
+
+    <h2>{{questions[questionIndex].question}}</h2>
+
+    <ul class="quiz-selection">
+      <li  *ngFor="let answer of answers">
+        <button class="quiz-option" (click)="verifyAnswer($event)">{{answer.text}}</button>
+      </li>
+    </ul>
+  </div>
+</div>
