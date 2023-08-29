@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class QuizComponent implements OnInit {
   public questionIndex: number = 0;
   public questions: IQuestion[] = [];
-  public timer: number = 60;
+  public timer: number = 180;
 
 
   public answers: any;
@@ -28,7 +28,7 @@ export class QuizComponent implements OnInit {
     if (this.questionIndex >= this.questions.length) {
       this.endQuiz()
     } else {
-      this.timer = 60;
+      this.timer = 180;
       this.answers = this.questions[this.questionIndex].answers;
     }
 
@@ -41,19 +41,19 @@ export class QuizComponent implements OnInit {
         panelClass: ['correct'],
         horizontalPosition: 'right',
         verticalPosition: 'top',
-        duration: 1000,
+        duration: 4000,
       });
       this.quizService.score++;
-      setTimeout(() => this.nextQuestion(), 1000)
+      setTimeout(() => this.nextQuestion(), 4000)
     }
     else {
       this.snackBar.open('Resposta errada!', undefined, {
         panelClass: ['incorrect'],
         horizontalPosition: 'right',
         verticalPosition: 'top',
-        duration: 1000,
+        duration: 4000,
       });
-      setTimeout(() => this.nextQuestion(), 1000)
+      setTimeout(() => this.nextQuestion(), 4000)
     }
   }
 
